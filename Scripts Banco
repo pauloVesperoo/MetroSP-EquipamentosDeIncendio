@@ -1,0 +1,46 @@
+CREATE TABLE Extintores (
+    ID_Extintor SERIAL PRIMARY KEY,
+    QR_Code VARCHAR(100) NOT NULL,
+    Localizacao VARCHAR(100) NOT NULL,
+    Data_Validade DATE NOT NULL,
+    Tipo VARCHAR(50) NOT NULL,
+    Status VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Setor (
+    ID_Setor SERIAL PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL,
+    Localizacao VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Extintor_Setor (
+    ID_Extintor INT,
+    ID_Setor INT,
+    PRIMARY KEY (ID_Extintor, ID_Setor),
+    FOREIGN KEY (ID_Extintor) REFERENCES Extintores(ID_Extintor),
+    FOREIGN KEY (ID_Setor) REFERENCES Setor(ID_Setor)
+);
+
+CREATE TABLE Manutencoes (
+    ID_Manutencao SERIAL PRIMARY KEY,
+    ID_Extintor INT,
+    Data_Manutencao DATE NOT NULL,
+    Tipo_Manutencao VARCHAR(50) NOT NULL,
+    Responsavel VARCHAR(100) NOT NULL,
+    FOREIGN KEY (ID_Extintor) REFERENCES Extintores(ID_Extintor)
+);
+
+CREATE TABLE Usuarios (
+    ID_Usuario SERIAL PRIMARY KEY,
+    Nome_Usuario VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    Senha VARCHAR(255) NOT NULL,  -- É recomendado criptografar a senha antes de salvar
+    Tipo_Usuario VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Relatorios (
+    ID_Relatorio SERIAL PRIMARY KEY,
+    Tipo_Relatorio VARCHAR(50) NOT NULL,
+    Data_Criacao DATE NOT NULL,
+    Descricao TEXT
+);

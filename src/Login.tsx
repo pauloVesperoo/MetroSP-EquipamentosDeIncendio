@@ -27,7 +27,7 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
         <EntradaTexto label='Senha' placeholder='Insira sua senha' secureTextEntry={true} />
       </Box>
       <Botao onPress={() => navigation.navigate('Tabs')}>Entrar</Botao>
-      <Link href='https://www.alura.com.br' mt={2}>
+      <Link href='' mt={2}>
         Esqueceu sua senha?
       </Link>
       <Box w='100%' flexDirection='row' justifyContent='center' mt={8}>

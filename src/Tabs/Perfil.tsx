@@ -1,10 +1,10 @@
 import { VStack, Text } from 'native-base'
 
-export default function Consultas(){
+export default function Perfil(){
     return(
         <VStack>
             <Text>
-                Consultas
+                Perfil
             </Text>
         </VStack>
     )

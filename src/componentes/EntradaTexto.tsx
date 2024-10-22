@@ -1,11 +1,12 @@
-import { FormControl, Input, IInputProps } from "native-base";
-import { ReactNode } from "react";
+import { FormControl, Input, IInputProps, useTheme } from "native-base";
 
 interface EntradaTextoProps extends IInputProps {
-  label: string; 
+  label: string;
 }
 
 export function EntradaTexto({ label, ...rest }: EntradaTextoProps) {
+  const { fontConfig } = useTheme(); 
+
   return (
     <FormControl mt={3}>
       <FormControl.Label>{label}</FormControl.Label>
@@ -15,6 +16,7 @@ export function EntradaTexto({ label, ...rest }: EntradaTextoProps) {
         borderRadius="lg"
         backgroundColor="gray.100"
         shadow={3}
+        fontFamily={fontConfig.Helvetica[100].normal} 
         {...rest}
       />
     </FormControl>

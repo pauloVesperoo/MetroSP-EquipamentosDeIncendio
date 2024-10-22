@@ -1,8 +1,9 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicos from 'react-native-vector-icons/Ionicons';
-import Principal from "./Principal";
 import { background } from "native-base/lib/typescript/theme/styled-system";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Perfil from "./Perfil";
+import Principal from "./Principal";
 
 const Tab = createBottomTabNavigator();
 
@@ -12,7 +13,6 @@ const screenOptions = {
     },
     tabBarActiveTintColor:"#001489",
     tabBarInactiveTintColor:"#FFF"
-
 }
 
 const tabs = [

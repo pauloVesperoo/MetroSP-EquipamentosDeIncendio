@@ -9,9 +9,9 @@ const Tab = createBottomTabNavigator();
 
 const screenOptions = {
     tabBarStyle:{
-        backgroundColor:"#002851"
+        backgroundColor:"#001489"
     },
-    tabBarActiveTintColor:"#001489",
+    tabBarActiveTintColor:"#339cff",
     tabBarInactiveTintColor:"#FFF"
 }
 

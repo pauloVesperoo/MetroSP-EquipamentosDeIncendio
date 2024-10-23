@@ -1,4 +1,5 @@
 import { Button, IButtonProps, useTheme } from "native-base";
+import React from "react";
 import { ReactNode } from "react";
 
 interface BotaoProps extends IButtonProps {

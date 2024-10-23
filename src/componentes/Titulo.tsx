@@ -1,4 +1,5 @@
 import { Text, ITextProps, useTheme } from "native-base";
+import React from "react";
 import { ReactNode } from "react";
 
 interface TituloProps extends ITextProps {
